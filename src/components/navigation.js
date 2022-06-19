@@ -35,9 +35,13 @@ const Navigation = () => {
                 </div>
                 <div className="nav-inner-right">
                     {socialNavItems.map((item) => (
-                        <Link to={item.url} key={item.label}>
+                        <a 
+                            href={item.url}
+                            target="_blank"
+                            key={item.label}
+                        >
                             <img src={item.icon} alt={item.label} />
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>

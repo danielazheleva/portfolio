@@ -1,13 +1,10 @@
-
-
 .nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--navbar-color);
-    border-bottom: 1px solid var(--light-border-color);
-    height: 60px;
+    background-color: var(--green);
+    border-bottom: 1px solid var(--dark-blue);
     z-index: 9;
 }
 
@@ -24,12 +21,16 @@
 }
 
 .nav-inner a {
+    text-decoration: none;
     color: var(--font-color);
+    font-weight: 500;
+    padding: 0.5rem;
 }
 
 .nav-inner a:hover {
     color: var(--bright-font-color);
     background: var(--navbar-color-hover);
+    border-radius: 15px 50px;
 }
 
 .nav-inner-left {
@@ -59,7 +60,7 @@
   }
 
   .nav-inner img {
-    max-width: 30px;
+    max-width: 25px;
     max-height: 25px;
   }
 
