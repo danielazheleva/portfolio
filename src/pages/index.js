@@ -18,10 +18,10 @@ const IndexPage = () => {
               <h2>Hello, I'm Daniela!</h2>
             </div>
             <div className="tldr">
-              <h3>
+              <p>
                 I'm a software engineer living in London, but originally from Bulgaria. 
                 This is my first attempt at building an online portfolio.
-              </h3>
+              </p>
             </div>
           </div>
         </div>

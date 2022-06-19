@@ -53,6 +53,19 @@
 html {
     background: var(--background-color);
 }
+
 .main {
     margin-top: 60px;
+    color: var(--bright-font-color);
+}
+
+.main a {
+  color: var(--yellow);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--page-width);
+  padding: 2rem;
 }
