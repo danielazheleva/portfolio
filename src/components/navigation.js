@@ -14,7 +14,7 @@ const mainNavItems = [
 ]
 
 const socialNavItems = [
-  { url: 'https://github.com/danielazheleva', icon: github, label: 'GitHub' },
+  { url: 'https://github.com/danizheleva', icon: github, label: 'GitHub' },
   { url: 'https://www.linkedin.com/in/daniela-zheleva/', icon: linkedin, label: 'LinkedIn' }
 ]
 
