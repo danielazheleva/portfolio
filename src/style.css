@@ -1,0 +1,31 @@
+/* Header */
+#body {
+    background: aqua
+}
+
+.nav {
+    position: fixed !important; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--navbar-color);
+    border-bottom: 1px solid var(--light-border-color);
+    height: 60px;
+    z-index: 9;
+}
+
+.nav_inner {
+    display: flex;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--post-font-family);
+    height: 100%;
+    justify-content: space-between;
+    max-width: var(--page-width);
+  }
+
+  .nav_inner_left {
+      
+  }

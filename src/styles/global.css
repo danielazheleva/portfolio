@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #fdb54a;
+  --secondary: #ffd479;
+  --link-color: white;
+  --border-color: #111;
+  --heading-font-color: var(--primary);
+  --background-color: #282c34;
+  --sidebar-color: #373d49;
+  --navbar-color: #1c1e24;
+  --navbar-color-hover: #272a33;
+  --sidebar-color-hover: #464e5f;
+  --sidebar-color-focus: #57637c;
+  --category-background-color: #1c1e24;
+  --category-background-color-hover: #24272e;
+  --light-border-color: rgba(255, 255, 255, 0.1);
+  --toolbar-background-color: #181818;
+  --toolbar-color: #eee;
+  --font-color: #d0d5df;
+  --dark-font-color: rgba(235, 240, 255, 0.5);
+  --bright-font-color: #eee;
+  --input-background: rgba(0, 0, 0, 0.3);
+  --blockquote-background-color: rgba(0, 0, 0, 0.3);
+  --blockquote-color: #b3b9c5;
+  --black: #111;
+  --inline-code-background-color: #393e4b;
+  --inline-code-color: #d0d5df;
+  --dark-opacity: rgba(0, 0, 0, 0.2);
+  --dark-opacity-hover: rgba(0, 0, 0, 0.3);
+  --reverse: var(--background-color);
+  --scrollbar: var(--navbar-color);
+  --scrollbar-track: var(--sidebar-color-hover);
+  --yellow: #ffd479;
+  --button-color: #6b76f3;
+  --button-font-color: white;
+  --page-width: 850px;
+
+  /* Font */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --heading-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --post-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace;
+}
+
+html {
+    background: var(--background-color);
+}
+.main {
+    margin: 50px;
+}
