@@ -14,13 +14,12 @@ const Layout = ({ pageTitle, children }) => {
     `)
   return (
     <div>
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <header>{data.site.siteMetadata.title}</header>
-      <Navigation></Navigation>
-      <main className="main">
-        <h1>{pageTitle}</h1>
-        {children}
-      </main>
+        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+        <header>{data.site.siteMetadata.title}</header>
+        <Navigation></Navigation>
+        <main className="main">
+            {children}
+        </main>
     </div>
   )
 }

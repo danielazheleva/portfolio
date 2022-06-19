@@ -6,7 +6,7 @@ import github from '../assets/icon-github.png'
 import me from '../assets/icon-me.png'
 import home from '../assets/icon-home.png'
 import linkedin from '../assets/icon-linkedin.png'
-import "./navigation.css"
+import "../styles/navigation.css"
 
 const mainNavItems = [
   { url: '/blog', icon: blog, label: 'Blogs' },
