@@ -1,8 +1,21 @@
 .card {
-    width: 250px;
+    width: 350px;
+    height: 280px;
     padding: 5px;
+}
+
+.card-inner {
+    height: 100%
+
+}
+.card div:hover {
+    color: var(--bright-font-color);
+    background: var(--green);
+    border-radius: 15px;
 }
 
 .body-holder {
     text-align: center;
+    padding: 15px;
+    height: 100%
 }

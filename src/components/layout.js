@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         <Navigation></Navigation>
         <main className="main">
-            <div className="card-holder">
+            <div>
                 {children}  
             </div>
         </main> 
