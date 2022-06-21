@@ -15,11 +15,11 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
   return (
-    <div>
+    <div className='container'>
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         <Navigation></Navigation>
         <main className="main">
-            <div className="container">
+            <div className="card-holder">
                 {children}  
             </div>
         </main> 
