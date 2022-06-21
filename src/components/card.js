@@ -12,6 +12,7 @@ const Card = ({ title, summary, url, publicationdate, image, image_alt }) => {
                 <div className='body-holder'>
                     <div className="title-holder">
                         <h1 className='title'>{title}</h1>
+                        <p className="date">{publicationdate}</p>
                     </div>
                     <div className="summary-holder">
                         <p className="summary">

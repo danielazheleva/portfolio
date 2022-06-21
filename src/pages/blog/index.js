@@ -18,6 +18,7 @@ const BlogPage = ({ data }) => {
                 order={index + 1}
                 image={node.frontmatter.image}
                 summary={node.frontmatter.summary}
+                publicationdate={node.frontmatter.date}
               />
           ))
         }
