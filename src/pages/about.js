@@ -41,26 +41,50 @@ const AboutPage = () => {
   return (
     <Layout pageTitle="About Me"> 
     <div className='text-holder'>
+      <h2>My Career Path...</h2>
       <p className='text-body'>
-        Lorem ipsum dolor sit amet, ut vix ullum tamquam expetendis. Ei mazim munere his. 
-        Conceptam philosophia vim ex, mentitum nominavi tincidunt ei qui. Oratio graecis te ius, ea eum liber mollis noluisse, 
-        vis atomorum antiopam periculis ut. Cum affert accusamus ne, at est errem tantas equidem. Cibo exerci pro ad. Eripuit deleniti eu vel, 
-        accusata similique vis cu, has eu dolor dolorem. Ne mea erat facilisi, ex atqui expetenda reprimique pri, te dolore consul iriure mei. 
-        Menandri disputando pro in, cu nam quis congue sententiae. 
+        My path to becoming a software engineer was somewhat non-traditional. I studied chemistry at Imperial College London, graduating with a masters, a <a 
+        href="https://www.pnas.org/doi/full/10.1073/pnas.1903500116" title="Building a synthetic mechanosensitive signaling pathway in compartmentalized artificial cells">
+        publication</a>, and new found respect for anyone wanting to spend their career working full time in a science lab. I knew it wasn't the option for me,
+        and so I looked elsewhere and landed a space on the Technology Graduate Program at Deutsche Bank. Not knowing much about either technology or Investment
+        Banking, I jumped into it with lots of enthusiasm. 
         <br></br><br></br>
+        Half way through my second 6 month rotation however, I started second guessing my decisions. You see
+        I had actually been hired as a Technical Business Analyst, a role which I never knew existed, and while <span>"being the bridge between the business and 
+        the developers"</span> sounded interesting on paper, in reality I spent my days looking at gant charts, sitting in meetings, and emailing spreadsheets 
+        around. The final push I needed came in the form of a 3 month stint in Group Audit. I knew I couldn't do this for the rest of my working life. 
+        <br></br><br></br>
+        It definitely wasn't all doom and gloom however. I met fantastic people and really talanted engineers, product owners and team leaders, as well as other 
+        graduates from the cohort who have become great friends.  got to see the inner workings of a <strong>very large</strong> corporate (to the best of my
+        knowledge there were ~10,000 engineers and ~80,000 total employees) and those 9 months helped me realise what I don't want to do, and ultimately led me
+        to what I <span>do want</span> to do - Software Engineering.
+        <br></br><br></br>
+        I was fortunate that my personal realisation coincided with a wider movement in the bank to retain technical resources, and enrich their technical skills. 
+        I was able to leave my Business Analayst role - and therefore the whole graduate scheme - 3 months early and transition into a new team, where my new role
+        would be a <span>Junior Software Engineer.</span> To this day I am still amazed and grateful that I landed this position, because it was here that I laid 
+        a foundation of knowledge which catapulted me in my journey. It was a combination of factors that made this experience so valuable:
         <ul>
-          <li>Duis enim nibh, mollis vel sapien et, euismod pulvinar mi. Duis vitae eleifend diam.</li>
-          <li>Praesent convallis mattis ligula sit amet lacinia. Sed vitae malesuada diam, nec facilisis metus.</li>
-          <li>Maecenas ut dictum purus. Integer placerat vestibulum nulla, nec dapibus urna aliquam sed. Etiam orci libero, lobortis nec luctus in, feugiat eget du.</li>
+          <li>
+            A super technical manager, who dedicated some of his precious time to explain basic concepts like REST APIs, MVC architecture and Unit testing.
+            We would spend our 1-1's aroud a white board, and I would come with a list of questions from things I had read that week. No question was stupid,
+            and at no time did I feel uncomforatable for my severe lack of knowledge.
+          </li>
+          <li>A small team, meaning I touched all parts of the tech stack. I would go on to write backend logic, build new front end compoentns, set up the apps 
+            first automated build and deployment pipeline (I wouldn't go as far as calling it full CI/CD though!), run user sessions and helping prioritise sprints. 
+            Later on when a more senior developer joined the team, he would lead a full re-write of the front end in Angular, which I got to see first hand, and 
+            later contribute new features to.
+          </li>
+          <li>Perhaps what turned out to be most useful - when I joined the team was in a re-org phase, meaning it would be some time (it was a huge corporate 
+            after all!) until our priorities were set in stone. In the mean time I would be working on a legacy, internal application aimed at improving the DevEx
+            experience across the bank, that many people wanted, but no team had resources to rebuild or maintian.</li>
         </ul>
-        Mei autem fugit percipitur eu, eos quot liber definiebas ex. Ei pri graeco democritum. Ex nullam efficiantur vim, ius viris affert 
-        mandamus ea, eum vivendo iracundia cu. Ne qui velit dolor soleat. Diam timeam delenit vel ad, eu eum exerci assueverit, dolorem maiestatis 
-        eloquentiam cum ei. Sea iudico invenire at. Tation utamur disputationi cu ius, id reque graece graeco duo, assum verear ea ius. Sonet 
-        omittantur appellantur per no, an eum ubique gloriatur rationibus, eloquentiam neglegentur at vel. Per odio sapientem concludaturque in, 
-        suas mundi aliquip duo ea, mea no munere conclusionemque. Nec modo eloquentiam et, maiorum hendrerit cu mea. Est invidunt definitionem eu, 
-        ut consul noluisse vim. Utamur alienum pertinacia vim no. Ut eam minim indoctum. 
+        By the time the team pivoted into its long-term objective (<span>which would be adopting cloud technology through the bank</span>) I had gained experience in a 
+        ton of new tools - Java, SpringBoot, Angular, Jenkins, Kubernetes (on OpenShift), Helm, MariaDB, MySQL - as well as core concepts like Git, using the
+        command line, Agile ceremonies and practices, doing demos and presentations, writing blog posts and building a community around a shared platform. 
+        <br></br><br></br>
       </p>
     </div>
+    <h2>On a Personal Side...</h2>
     <div className='image-holder'>
       <div className="imgslider">
         <Slider {...settings}>
