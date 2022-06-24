@@ -1,0 +1,13 @@
+.tag {
+    text-align: center;
+}
+
+.image-holder {
+    padding: 30px;
+}
+
+.slick-slide img {
+    margin: auto;
+    width: 500px;
+    height: 350px;
+}
