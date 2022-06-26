@@ -9,8 +9,8 @@
 
 }
 .card div:hover {
-    color: var(--bright-font-color);
-    background: var(--green);
+    color: var(--link-hover-color);
+    background: var(--hover-color);
     border-radius: 15px;
 }
 

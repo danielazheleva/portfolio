@@ -2,46 +2,13 @@
 
 :root {
   /* Colors */
-  --background-color: #EDF3F1;
-  --yellow: #F7B801;
-  --green: #81AE9D;
-  --dark-blue: #242F40;
-  --dark-grey: 363636;
-  --font-color: var(--dark-grey);
-  --navbar-color-hover: var(--dark-blue);
-  --page-width: 850px;
-
-  --primary: #fdb54a;
-  --secondary: #ffd479;
-  --link-color: white;
-  --border-color: #111;
-  --heading-font-color: var(--primary);
-  --sidebar-color: #373d49;
-  --navbar-color: #1c1e24;
-  --sidebar-color-hover: #464e5f;
-  --sidebar-color-focus: #57637c;
-  --category-background-color: #1c1e24;
-  --category-background-color-hover: #24272e;
-  --light-border-color: rgba(255, 255, 255, 0.1);
-  --toolbar-background-color: #181818;
-  --toolbar-color: #eee;
-  --dark-font-color: rgba(235, 240, 255, 0.5);
-  --bright-font-color: #eee;
-  --input-background: rgba(0, 0, 0, 0.3);
-  --blockquote-background-color: rgba(0, 0, 0, 0.3);
-  --blockquote-color: #b3b9c5;
-  --black: #111;
-  --inline-code-background-color: #393e4b;
-  --inline-code-color: #d0d5df;
-  --dark-opacity: rgba(0, 0, 0, 0.2);
-  --dark-opacity-hover: rgba(0, 0, 0, 0.3);
-  --reverse: var(--background-color);
-  --scrollbar: var(--navbar-color);
-  --scrollbar-track: var(--sidebar-color-hover);
-  
-  --button-color: #6b76f3;
-  --button-font-color: white;
-  
+  --background-color: linear-gradient(-45deg, #162c35 60%, #0c252f 80%);
+  --headers-bg-color: #0c252f;
+  --nav-font-color: #fff;
+  --text-color: #fff;
+  --link-default-color: #f94962;
+  --hover-color: #bdddff;
+  --link-hover-color: #000;
 
   /* Font */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
@@ -54,20 +21,26 @@
     'Roboto', Roboto, Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace;
+
+  /* Size */
+  --page-width: 850px;
 }
 
 html {
     background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    height: 100%
+}
+
+html a {
+  color: var(--link-default-color);
 }
 
 .main {
     margin-top: 60px;
-    color: var(--dark-grey)
 }
 
-.main a {
-  color: var(--yellow);
-}
 
 .container {
   margin-left: auto;
