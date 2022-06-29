@@ -10,7 +10,7 @@ import tenerife from "../assets/photos/tenerife.jpg";
 import cotswolds from "../assets/photos/cotswolds.jpg";
 
 // Step 2: Define your component
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   const [showShort, setShowShort] = React.useState(true)
   const [showLong, setShowLong] = React.useState(false)
 
@@ -55,6 +55,15 @@ const AboutPage = () => {
             <div>
               <h3 className="sub-heading" onClick={() => flipDivs()}>...the short version</h3>
               <p className='text-body'>
+               {  
+                data.allMdx.nodes.map((node, index) => {
+                  if(node.slug.includes('about')) {
+                    if(node.frontmatter.tittle == 'Short') {
+                      return (<p>{node.body}</p>)
+                    }
+                  }
+                })
+              }
                 My path to becoming a software engineer was somewhat non-traditional. I studied chemistry at Imperial College London, graduating with a masters, a <a 
                 href="https://www.pnas.org/doi/full/10.1073/pnas.1903500116" title="Building a synthetic mechanosensitive signaling pathway in compartmentalized artificial cells">
                 publication</a>, and new found respect for anyone wanting to spend their career working full time in a science lab. I knew it wasn't the option for me,
@@ -149,6 +158,24 @@ const AboutPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+query {
+  allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    nodes {
+      frontmatter {
+        date(formatString: "MMMM D, YYYY")
+        title,
+        summary,
+        image
+      }
+      id
+      body
+      slug
+    }
+  }
+}
+`
 
 // Step 3: Export your component
 export default AboutPage
