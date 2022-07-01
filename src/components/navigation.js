@@ -6,6 +6,7 @@ import github from '../assets/icon-github.png'
 import me from '../assets/icon-me.png'
 import home from '../assets/icon-home.png'
 import linkedin from '../assets/icon-linkedin.png'
+import moon from '../assets/icon-moon.png'
 import "../styles/navigation.css"
 
 const mainNavItems = [
@@ -43,6 +44,7 @@ const Navigation = () => {
                             <img src={item.icon} alt={item.label} />
                         </a>
                     ))}
+                    <a><img src={moon}></img></a>
                 </div>
             </div>
         </header>
