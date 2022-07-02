@@ -9,7 +9,7 @@ import { graphql } from 'gatsby'
 import bulgaria from "../assets/photos/bulgaria.jpg";
 import tenerife from "../assets/photos/tenerife.jpg";
 import cotswolds from "../assets/photos/cotswolds.jpg";
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import AboutBody from "../components/about-body"
 
 
 // Step 2: Define your component
@@ -59,15 +59,7 @@ const AboutPage = ({ data }) => {
               <h3 className="sub-heading" onClick={() => flipDivs()}>...the short version</h3>
               {
                 data.allMdx.nodes.map((node, index) => {
-                  if (node.slug.includes('about')) {
-                    if (node.frontmatter.title === 'Short') {
-                      return (
-                        <p className='text-body'>
-                          <MDXRenderer>{node.body}</MDXRenderer>
-                        </p>
-                      )
-                    }
-                  }
+                  return (<AboutBody node={node} expected="Short"> </AboutBody>)
                 })
               }
             </div>
@@ -79,15 +71,7 @@ const AboutPage = ({ data }) => {
               <h3 className="sub-heading" onClick={() => flipDivs()}>...the long version</h3>
               {
                 data.allMdx.nodes.map((node, index) => {
-                  if (node.slug.includes('about')) {
-                    if (node.frontmatter.title === 'Long') {
-                      return (
-                        <p className='text-body'>
-                          <MDXRenderer>{node.body}</MDXRenderer>
-                        </p>
-                      )
-                    }
-                  }
+                  return (<AboutBody node={node} expected="Long"> </AboutBody>)
                 })
               }
             </div>
@@ -109,15 +93,7 @@ const AboutPage = ({ data }) => {
       <div className='text-holder'>
         {
           data.allMdx.nodes.map((node, index) => {
-            if (node.slug.includes('about')) {
-              if (node.frontmatter.title === 'Personal') {
-                return (
-                  <p className='text-body'>
-                    <MDXRenderer>{node.body}</MDXRenderer>
-                  </p>
-                )
-              }
-            }
+            return (<AboutBody node={node} expected="Personal"> </AboutBody>)
           })
         }
       </div>
