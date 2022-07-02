@@ -50,82 +50,77 @@ const AboutPage = ({ data }) => {
   }
 
   return (
-    <Layout pageTitle="About Me"> 
-    <div className='text-holder'>
-      <h2>My Career Path...</h2>
-          <div class="flip-card-short">
-            { showShort ? 
+    <Layout pageTitle="About Me">
+      <div className='text-holder'>
+        <h2>My Career Path...</h2>
+        <div class="flip-card-short">
+          {showShort ?
             <div>
               <h3 className="sub-heading" onClick={() => flipDivs()}>...the short version</h3>
-               {  
+              {
                 data.allMdx.nodes.map((node, index) => {
-                  if(node.slug.includes('about')) {
-                    if(node.frontmatter.title === 'Short') {
+                  if (node.slug.includes('about')) {
+                    if (node.frontmatter.title === 'Short') {
                       return (
-                      <p className='text-body'>
-                        <MDXRenderer>{node.body}</MDXRenderer>
-                      </p>
+                        <p className='text-body'>
+                          <MDXRenderer>{node.body}</MDXRenderer>
+                        </p>
                       )
                     }
                   }
                 })
               }
             </div>
-            : null }
-          </div>
-          <div class="flip-card-long">
-          { showLong ? 
+            : null}
+        </div>
+        <div class="flip-card-long">
+          {showLong ?
             <div>
               <h3 className="sub-heading" onClick={() => flipDivs()}>...the long version</h3>
-                {  
-                  data.allMdx.nodes.map((node, index) => {
-                    if(node.slug.includes('about')) {
-                      if(node.frontmatter.title === 'Long') {
-                        return (
-                          <p className='text-body'>
-                            <MDXRenderer>{node.body}</MDXRenderer>
-                          </p>
-                        )
-                      }
+              {
+                data.allMdx.nodes.map((node, index) => {
+                  if (node.slug.includes('about')) {
+                    if (node.frontmatter.title === 'Long') {
+                      return (
+                        <p className='text-body'>
+                          <MDXRenderer>{node.body}</MDXRenderer>
+                        </p>
+                      )
                     }
-                  })
-                }
+                  }
+                })
+              }
             </div>
-            : null }
-          </div>
+            : null}
         </div>
-    <h2>On a Personal Side...</h2>
-    <div className='image-holder'>
-      <div className="imgslider">
-        <Slider {...settings}>
-          {images.map((item) => (
-            <div key={item.id}>
-              <img className='image' src={item.src} alt={item.alt} />
-            </div>
-          ))}
-        </Slider>
       </div>
-    </div>
-    <div className='text-holder'>
-      <p className='text-body'>
-        Integer vel pellentesque nunc. Praesent tempus iaculis fermentum. Cras id tempus ipsum. Morbi nec consectetur ex. In arcu tellus, interdum nec 
-        pellentesque vehicula, suscipit id dui. Fusce non feugiat erat. Suspendisse scelerisque varius pretium. Suspendisse potenti. Fusce auctor gravida 
-        mauris, non vulputate risus volutpat molestie. Maecenas ut dictum purus. Integer placerat vestibulum nulla, nec dapibus urna aliquam sed. Etiam orci 
-        libero, lobortis nec luctus in, feugiat eget dui. Sed fringilla nunc sed ex pharetra, at blandit nibh consectetur. Vivamus gravida interdum mi, at 
-        porttitor erat imperdiet eu. Aenean et orci diam. Pellentesque placerat semper nunc, feugiat facilisis est interdum eu.
-        <br></br><br></br><br></br>
-        Aliquam ante dolor, lobortis lobortis erat non, mollis congue orci. Nullam eu ultricies orci, quis fringilla enim. In hac habitasse platea dictumst. 
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed malesuada purus in sapien dapibus, eu interdum tortor 
-        iaculis. Aliquam vel nisi tempor, ullamcorper tortor nec, malesuada nisl. Etiam ut malesuada mi, sed consequat velit. Ut quis nibh nec mauris tempus 
-        pretium in ac nisi. Nunc sed varius orci. Suspendisse sollicitudin bibendum orci sed pellentesque. Proin vitae est non turpis cursus fermentum ac at 
-        erat. In consequat sagittis molestie.
-        <br></br><br></br>
-        Phasellus at dolor volutpat, scelerisque nisi a, pretium lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-        In et vestibulum metus, a dignissim elit. Aliquam nec mi vitae nulla egestas commodo. Suspendisse ac sem imperdiet leo dapibus gravida id quis nulla. 
-        Quisque quis diam a justo rhoncus consequat. Integer placerat lectus viverra maximus luctus. Vivamus gravida bibendum nunc in tristique. Praesent vehicula 
-        lectus a felis pulvinar, eu iaculis purus elementum. Maecenas pretium fringilla libero eu blandit.
-      </p>
-    </div>
+      <h2>On a Personal Side...</h2>
+      <div className='image-holder'>
+        <div className="imgslider">
+          <Slider {...settings}>
+            {images.map((item) => (
+              <div key={item.id}>
+                <img className='image' src={item.src} alt={item.alt} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+      <div className='text-holder'>
+        {
+          data.allMdx.nodes.map((node, index) => {
+            if (node.slug.includes('about')) {
+              if (node.frontmatter.title === 'Personal') {
+                return (
+                  <p className='text-body'>
+                    <MDXRenderer>{node.body}</MDXRenderer>
+                  </p>
+                )
+              }
+            }
+          })
+        }
+      </div>
     </Layout>
   )
 }
