@@ -90,7 +90,7 @@ const AboutPage = ({ data }) => {
           </Slider>
         </div>
       </div>
-      <div className='text-holders'>
+      <div className='text-holder'>
         {
           data.allMdx.nodes.map((node, index) => {
             return (<AboutBody node={node} expected="Personal"> </AboutBody>)
