@@ -9,7 +9,6 @@ import { graphql } from 'gatsby'
 import bulgaria from "../assets/photos/bulgaria.jpg";
 import tenerife from "../assets/photos/tenerife.jpg";
 import cotswolds from "../assets/photos/cotswolds.jpg";
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import AboutBody from "../components/about-body"
 
 
