@@ -53,7 +53,7 @@ const AboutPage = ({ data }) => {
     <Layout pageTitle="About Me">
       <div className='text-holder'>
         <h2>My Career Path...</h2>
-        <div class="flip-card-short">
+        <div class="flip-card">
           {showShort ?
             <div onClick={() => flipDivs()}>
               <h3 className="sub-heading">...the short version</h3>
@@ -65,7 +65,7 @@ const AboutPage = ({ data }) => {
             </div>
             : null}
         </div>
-        <div class="flip-card-long">
+        <div class="flip-card">
           {showLong ?
             <div onClick={() => flipDivs()}>
               <h3 className="sub-heading">...the long version</h3>
