@@ -8,6 +8,8 @@ import home from '../assets/icon-home.png'
 import linkedin from '../assets/icon-linkedin.png'
 import moon from '../assets/icon-moon.png'
 import "../styles/navigation.css"
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
 
 const mainNavItems = [
   { url: '/blog', icon: blog, label: 'Blogs' },
@@ -44,7 +46,18 @@ const Navigation = () => {
                             <img src={item.icon} alt={item.label} />
                         </a>
                     ))}
-                    <a><img src={moon}></img></a>
+                    <ThemeToggler>
+                        {({ theme, toggleTheme }) => (
+                        <label>
+                            <input
+                            type="checkbox"
+                            onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                            checked={theme === 'dark'}
+                            />{' '}
+                            Dark mode
+                        </label>
+                        )}
+                    </ThemeToggler>
                 </div>
             </div>
         </header>

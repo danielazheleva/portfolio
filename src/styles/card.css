@@ -8,11 +8,6 @@
     height: 100%
 
 }
-.card div:hover {
-    color: var(--link-hover-color);
-    background: var(--hover-color);
-    border-radius: 15px;
-}
 
 .body-holder {
     text-align: center;
