@@ -55,8 +55,8 @@ const AboutPage = ({ data }) => {
         <h2>My Career Path...</h2>
         <div class="flip-card-short">
           {showShort ?
-            <div>
-              <h3 className="sub-heading" onClick={() => flipDivs()}>...the short version</h3>
+            <div onClick={() => flipDivs()}>
+              <h3 className="sub-heading">...the short version</h3>
               {
                 data.allMdx.nodes.map((node, index) => {
                   return (<AboutBody node={node} expected="Short"> </AboutBody>)
@@ -67,8 +67,8 @@ const AboutPage = ({ data }) => {
         </div>
         <div class="flip-card-long">
           {showLong ?
-            <div>
-              <h3 className="sub-heading" onClick={() => flipDivs()}>...the long version</h3>
+            <div onClick={() => flipDivs()}>
+              <h3 className="sub-heading">...the long version</h3>
               {
                 data.allMdx.nodes.map((node, index) => {
                   return (<AboutBody node={node} expected="Long"> </AboutBody>)
