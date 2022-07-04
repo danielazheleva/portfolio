@@ -9,18 +9,23 @@ const BlogPage = ({ data }) => {
     <Layout pageTitle="My Blog Posts">
       <div className='card-holder'>
         {
-          data.allMdx.nodes.map((node, index) => (
-            <Card
-                key={index}
-                title={node.frontmatter.title}
-                url={node.slug}
-                likes={1}
-                order={index + 1}
-                image={node.frontmatter.image}
-                summary={node.frontmatter.summary}
-                publicationdate={node.frontmatter.date}
-              />
-          ))
+          data.allMdx.nodes.map((node, index) => {
+            console.log(node)
+            if (node.slug.includes("blogs")) {
+              return (
+                <Card
+                    key={index}
+                    title={node.frontmatter.title}
+                    url={node.slug}
+                    likes={1}
+                    order={index + 1}
+                    image={node.frontmatter.image}
+                    summary={node.frontmatter.summary}
+                    publicationdate={node.frontmatter.date}
+                  />
+              )
+            }
+          })
         }
       </div>
     </Layout>
