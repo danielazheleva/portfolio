@@ -6,6 +6,10 @@
     padding: 30px;
 }
 
+.flip-card {
+    cursor: pointer;
+}
+
 .slick-slide img {
     margin: auto;
     width: 500px;

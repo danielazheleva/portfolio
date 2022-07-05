@@ -2,16 +2,12 @@
     width: 350px;
     height: 300px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .card-inner {
     height: 100%
 
-}
-.card div:hover {
-    color: var(--link-hover-color);
-    background: var(--hover-color);
-    border-radius: 15px;
 }
 
 .body-holder {

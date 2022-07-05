@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--headers-bg-color);
+    background-color: var(--navBg);
     z-index: 9;
     box-shadow: 0 4px 20px rgb(0 0 0 / 12%);
 }
@@ -22,7 +22,6 @@
 .nav-inner a {
     padding: 0.35em 0.9rem;
     background: 0 0;
-    color: var(--nav-font-color);
     text-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
     text-decoration: none;
     font-weight: 500;

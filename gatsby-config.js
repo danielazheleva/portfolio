@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
+    'gatsby-plugin-dark-mode',
     "gatsby-plugin-emotion", 
     "gatsby-plugin-image", 
     {
@@ -38,5 +39,6 @@ module.exports = {
         path: `${__dirname}/static_text_content`,
       }
     },
+    
   ]
 };
