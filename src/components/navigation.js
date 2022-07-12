@@ -7,8 +7,10 @@ import me from '../assets/icon-me.png'
 import home from '../assets/icon-home.png'
 import linkedin from '../assets/icon-linkedin.png'
 import moon from '../assets/icon-moon.png'
+import sun from '../assets/icon-sun.png'
 import "../styles/navigation.css"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import Toggle from 'react-toggle'
 
 
 const mainNavItems = [
@@ -48,14 +50,16 @@ const Navigation = () => {
                     ))}
                     <ThemeToggler>
                         {({ theme, toggleTheme }) => (
-                        <label>
-                            <input
-                            type="checkbox"
-                            onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                            checked={theme === 'dark'}
-                            />{' '}
-                            Dark mode
-                        </label>
+                            <label>
+                                <Toggle
+                                    defaultChecked={theme === 'dark'}
+                                    icons={{
+                                        checked: <img src={moon} />,
+                                        unchecked: <img src={sun} />,
+                                    }}
+                                    onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                                />
+                            </label>
                         )}
                     </ThemeToggler>
                 </div>
